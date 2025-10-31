@@ -7,3 +7,10 @@
 	CONSTRAINT [FK_ApplicationStatusHistory_Application] FOREIGN KEY ([ApplicationId]) REFERENCES [Application]([Id]), 
     CONSTRAINT [PK_ApplicationStatusHistory] PRIMARY KEY ([Id])
 )
+GO
+
+CREATE NONCLUSTERED INDEX [IX_ApplicationStatusHistory_ApplicationId] ON [dbo].[ApplicationStatusHistory]
+(
+	[ApplicationId] ASC
+)
+GO

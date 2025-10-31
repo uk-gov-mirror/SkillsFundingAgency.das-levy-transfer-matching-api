@@ -45,6 +45,10 @@ CREATE NONCLUSTERED INDEX [IX_Application_PledgeId]
     ON [dbo].[Application]([PledgeId] ASC);
 GO
 
+CREATE NONCLUSTERED INDEX [IX_Application_Status_PledgeId]
+    ON [dbo].[Application]([Status] ASC,[PledgeId] ASC);
+GO
+
 CREATE NONCLUSTERED INDEX [IX_Application_EmployerAccountId] ON [dbo].[Application]
 (
 	[EmployerAccountId] ASC
@@ -57,3 +61,4 @@ CREATE NONCLUSTERED INDEX [IX_Application_CreatedOnIdEmployerAccountId] ON [dbo]
 	[Id] ASC,
 	[EmployerAccountId] ASC
 )
+GO
